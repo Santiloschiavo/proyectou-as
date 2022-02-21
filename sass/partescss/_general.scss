@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(../img/beauty-3712230.jpg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 1fr 5fr 1fr;
+    height: 800px;
+    width: 100%;
+}
+.header {
+    grid-column: 1/9;
+    background: $color1;
+    display: grid;
+    .header__h1 {
+        @if $h1==h11 {
+            font-size: 70px;
+            box-sizing: border-box;
+            padding: 5px 0 0 15px;
+            color: $color2;
+            justify-self: center;
+            align-self: center;
+            font-family: 'Dancing Script', cursive;
+        }
+        @else if $h1==h12 {
+            font-size: 60px;
+            box-sizing: border-box;
+            padding: 5px;
+            margin-top: 3px;
+            color: $color3;
+            justify-self: center;
+            align-self: center;
+            font-family: fantasy;
+            border: solid 3px $color2;
+            border-radius: 10%;
+        }
+        @else if $h1==h13 {
+            font-size: 50px;
+            box-sizing: border-box;
+            padding: 5px 0 0 15px;
+            color: $color4;
+            justify-self: center;
+            align-self: center;
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+    }
+}
+.nav {
+    width: 100%;
+    grid-column: 9/12;
+    background: $color1;
+    list-style: none;
+    box-sizing: border-box;
+    padding-top: 20px;
+    .nav__ul {
+        display: flex;
+        justify-content: end;
+        text-align: end;
+        font-size: 30px;
+        margin: 5px 20px;
+        list-style: none;
+        font-family: 'Dancing Script', cursive;
+        .nav__ul-a {
+            text-decoration: none;
+            color: $color2;
+            transition-duration: 1s;
+            margin: 10px;
+            &:hover {
+                color: $color3; 
+            }
+        }
+    }
+}
+.footer {
+    grid-column: 1/12;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    padding: 20px;
+    background-image: linear-gradient(to right, $color5, $color3);
+    .footer__nav {
+        align-self: end;
+        .footer__nav-a {
+            text-decoration: none;
+            color: $color4;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+    }
+    .footer__h5 {
+        align-self: end;
+        justify-self: center;
+    }
+}
+.footer ul {
+    list-style: none;
+}
+
+
+.footer__redes {
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    align-content: end;
+    flex-direction: row-reverse;
+    .footer__redes-li {
+        margin: 10px;
+    }
+}

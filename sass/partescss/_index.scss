@@ -1,0 +1,23 @@
+.section {
+    grid-column: 8/11;
+    grid-row: 2/3;
+    width: 100%;
+    padding: 30px;
+    animation-duration: 8s;
+    animation-name: aparecer;
+    .section__h2 {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        font-size: 40px;
+        font-family: 'Dancing Script', cursive;
+    }
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        color: #888;
+    }
+    100% {
+        opacity: 1;
+    }
+}
